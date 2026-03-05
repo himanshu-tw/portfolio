@@ -216,7 +216,6 @@
     .project-card:hover { border-color: rgba(41, 214, 179, 0.4); background: var(--bg-card-hover); transform: translateY(-5px); }
     .project-card:hover::before { opacity: 1; }
 
-    /* Browser mockup */
     .project-thumb {
       width: 100%;
       background: #0a0a0a;
@@ -253,7 +252,6 @@
       color: rgba(41, 214, 179, 0.15); letter-spacing: -1px; user-select: none;
     }
 
-    /* Standalone placeholder (no .project-thumb wrapper) — for placeholder card */
     .project-card.placeholder .project-thumb-placeholder { margin-top: 0; }
 
     .project-body { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
@@ -478,7 +476,7 @@
       <div class="project-card">
         <div class="project-thumb">
           <img
-            src="images/portfolio-next-mongo-connect.png"
+            src="./images/portfolio-next-mongo-connect.png"
             alt="next-mongo-connect landing page" loading="lazy"
             onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div class=project-thumb-placeholder>NMC</div>')" />
         </div>
@@ -498,13 +496,27 @@
         </div>
       </div>
 
-      <!-- 04 Placeholder -->
-      <div class="project-card placeholder">
-        <div class="project-thumb-placeholder">?</div>
+      <!-- 04 exercise-form-checker -->
+      <div class="project-card">
+        <div class="project-thumb">
+          <img
+            src="./images/exercise-form-checker-landing-page.png"
+            alt="exercise-form-checker landing page" loading="lazy"
+            onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div class=project-thumb-placeholder>EFC</div>')" />
+        </div>
         <div class="project-body">
           <p class="project-num">04</p>
-          <h4>Coming Soon</h4>
-          <p>Something new in the works.</p>
+          <h4>exercise-form-checker</h4>
+          <p>Real-time exercise form checker using webcam. Counts reps and gives instant visual feedback — powered by MediaPipe Pose Landmarker.</p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">MediaPipe</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/himanshu-tw/exercise-form-checker" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
+            <a href="https://himanshu-tw.github.io/exercise-form-checker-landing-page" class="btn btn-ghost btn-sm" target="_blank">Live →</a>
+          </div>
         </div>
       </div>
 
@@ -522,7 +534,7 @@
         <p>I pick up new skills fast, balance learning with studies, and ship things that work. Always building something.</p>
       </div>
       <div class="about-stats">
-        <div class="stat-card"><div class="stat-num">3+</div><div class="stat-label">Projects shipped</div></div>
+        <div class="stat-card"><div class="stat-num">4+</div><div class="stat-label">Projects shipped</div></div>
         <div class="stat-card"><div class="stat-num">1</div><div class="stat-label">npm package</div></div>
         <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Technologies</div></div>
         <div class="stat-card"><div class="stat-num">∞</div><div class="stat-label">Still learning</div></div>
