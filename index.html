@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="icon" type="image/svg+xml"
+    href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='45' fill='%2329d6b3'/><text x='50' y='67' font-size='52' font-family='serif' font-weight='bold' text-anchor='middle' fill='%23000'>H</text></svg>">
 
   <!-- 5. OG / Meta tags -->
   <title>Himanshu Tiwari | Web Developer</title>
-  <meta name="description" content="Himanshu Tiwari — freelance web developer from West Bengal, India. Building full-stack apps with React, Next.js, Node, MongoDB and more.">
+  <meta name="description"
+    content="Himanshu Tiwari — freelance web developer from West Bengal, India. Building full-stack apps with React, Next.js, Node, MongoDB and more.">
   <meta name="author" content="Himanshu Tiwari">
   <meta name="keywords" content="Himanshu Tiwari, web developer, freelance, React, Next.js, portfolio">
 
@@ -14,7 +19,7 @@
   <meta property="og:title" content="Himanshu Tiwari | Web Developer">
   <meta property="og:description" content="Freelance web developer from India. React, Next.js, Node, MongoDB.">
   <meta property="og:image" content="https://og-image-url.vercel.app/Himanshu%20Tiwari.png">
-  <meta property="og:url" content="https://codewithme569.github.io">
+  <meta property="og:url" content="https://himanshu-tw.github.io">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Himanshu Tiwari | Web Developer">
@@ -22,7 +27,9 @@
   <meta name="twitter:image" content="https://og-image-url.vercel.app/Himanshu%20Tiwari.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
 
   <style>
     :root {
@@ -31,14 +38,23 @@
       --bg: #0d0d0d;
       --bg-card: #141414;
       --bg-card-hover: #1a1a1a;
-      --border: rgba(255,255,255,0.08);
+      --border: rgba(255, 255, 255, 0.08);
       --text: #e8e8e8;
       --text-muted: #888;
       --white: #fff;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       font-family: 'DM Sans', sans-serif;
@@ -49,7 +65,10 @@
       cursor: none;
     }
 
-    a, button { cursor: none; }
+    a,
+    button {
+      cursor: none;
+    }
 
     /* =====================
        2. CUSTOM CURSOR
@@ -102,7 +121,7 @@
       position: sticky;
       top: 0;
       z-index: 500;
-      background: rgba(13,13,13,0.88);
+      background: rgba(13, 13, 13, 0.88);
       backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border);
     }
@@ -135,16 +154,26 @@
     .links li a::after {
       content: '';
       position: absolute;
-      bottom: -2px; left: 0;
-      width: 0; height: 2px;
+      bottom: -2px;
+      left: 0;
+      width: 0;
+      height: 2px;
       background: var(--teal);
       border-radius: 2px;
       transition: width 0.25s ease;
     }
 
-    .links li a.active { color: var(--teal); }
-    .links li a.active::after { width: 100%; }
-    .links li a:hover { color: var(--teal); }
+    .links li a.active {
+      color: var(--teal);
+    }
+
+    .links li a.active::after {
+      width: 100%;
+    }
+
+    .links li a:hover {
+      color: var(--teal);
+    }
 
     /* Hamburger */
     .hamburger {
@@ -166,16 +195,26 @@
       transition: transform 0.3s ease, opacity 0.3s ease, background 0.2s;
     }
 
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); background: var(--teal); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); background: var(--teal); }
+    .hamburger.open span:nth-child(1) {
+      transform: translateY(7px) rotate(45deg);
+      background: var(--teal);
+    }
+
+    .hamburger.open span:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.open span:nth-child(3) {
+      transform: translateY(-7px) rotate(-45deg);
+      background: var(--teal);
+    }
 
     /* Mobile fullscreen drawer */
     .mobile-menu {
       display: none;
       position: fixed;
       inset: 0;
-      background: rgba(13,13,13,0.97);
+      background: rgba(13, 13, 13, 0.97);
       backdrop-filter: blur(20px);
       z-index: 400;
       flex-direction: column;
@@ -187,7 +226,10 @@
       transition: opacity 0.3s ease;
     }
 
-    .mobile-menu.open { opacity: 1; pointer-events: all; }
+    .mobile-menu.open {
+      opacity: 1;
+      pointer-events: all;
+    }
 
     .mobile-menu a {
       font-family: 'Syne', sans-serif;
@@ -198,12 +240,22 @@
       transition: color 0.2s;
     }
 
-    .mobile-menu a:hover { color: var(--teal); }
+    .mobile-menu a:hover {
+      color: var(--teal);
+    }
 
     @media (max-width: 640px) {
-      .links { display: none; }
-      .hamburger { display: flex; }
-      .mobile-menu { display: flex; }
+      .links {
+        display: none;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      .mobile-menu {
+        display: flex;
+      }
     }
 
     /* =====================
@@ -222,9 +274,11 @@
     #header::before {
       content: '';
       position: absolute;
-      top: -20%; right: -10%;
-      width: 600px; height: 600px;
-      background: radial-gradient(circle, rgba(41,214,179,0.12) 0%, transparent 65%);
+      top: -20%;
+      right: -10%;
+      width: 600px;
+      height: 600px;
+      background: radial-gradient(circle, rgba(41, 214, 179, 0.12) 0%, transparent 65%);
       pointer-events: none;
     }
 
@@ -247,7 +301,9 @@
       margin-bottom: 1.5rem;
     }
 
-    .name span { color: var(--teal); }
+    .name span {
+      color: var(--teal);
+    }
 
     .about-me-header {
       font-size: clamp(1rem, 2vw, 1.2rem);
@@ -257,7 +313,11 @@
       margin-bottom: 2.5rem;
     }
 
-    .buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .buttons {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
 
     .btn {
       display: inline-block;
@@ -269,15 +329,37 @@
       transition: all 0.2s;
     }
 
-    .btn-primary { background: var(--teal); color: #000; }
-    .btn-primary:hover { background: var(--teal-dark); transform: translateY(-1px); }
-    .btn-ghost { background: transparent; color: var(--text-muted); border: 1px solid var(--border); }
-    .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
-    .btn-sm { padding: 8px 16px; font-size: 0.78rem; border-radius: 5px; }
+    .btn-primary {
+      background: var(--teal);
+      color: #000;
+    }
+
+    .btn-primary:hover {
+      background: var(--teal-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border);
+    }
+
+    .btn-ghost:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .btn-sm {
+      padding: 8px 16px;
+      font-size: 0.78rem;
+      border-radius: 5px;
+    }
 
     .scroll-hint {
       position: absolute;
-      bottom: 2rem; left: 50%;
+      bottom: 2rem;
+      left: 50%;
       transform: translateX(-50%);
       display: flex;
       flex-direction: column;
@@ -292,13 +374,21 @@
 
     .scroll-hint::after {
       content: '';
-      width: 1px; height: 36px;
+      width: 1px;
+      height: 36px;
       background: linear-gradient(to bottom, var(--teal), transparent);
     }
 
     @keyframes scrollbounce {
-      0%,100% { transform: translateX(-50%) translateY(0); }
-      50% { transform: translateX(-50%) translateY(6px); }
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(6px);
+      }
     }
 
     /* =====================
@@ -350,7 +440,9 @@
       transition: border-color 0.2s;
     }
 
-    .skill-card:hover { border-color: var(--teal); }
+    .skill-card:hover {
+      border-color: var(--teal);
+    }
 
     .skill-card h3 {
       font-family: 'Syne', sans-serif;
@@ -362,11 +454,15 @@
       font-weight: 600;
     }
 
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
 
     .skill-tag {
-      background: rgba(41,214,179,0.07);
-      border: 1px solid rgba(41,214,179,0.18);
+      background: rgba(41, 214, 179, 0.07);
+      border: 1px solid rgba(41, 214, 179, 0.18);
       color: var(--text);
       font-size: 0.8rem;
       padding: 4px 10px;
@@ -396,7 +492,9 @@
     .project-card::before {
       content: '';
       position: absolute;
-      top: 0; left: 0; right: 0;
+      top: 0;
+      left: 0;
+      right: 0;
       height: 2px;
       background: linear-gradient(to right, var(--teal), transparent);
       opacity: 0;
@@ -404,8 +502,15 @@
       z-index: 1;
     }
 
-    .project-card:hover { border-color: rgba(41,214,179,0.4); background: var(--bg-card-hover); transform: translateY(-5px); }
-    .project-card:hover::before { opacity: 1; }
+    .project-card:hover {
+      border-color: rgba(41, 214, 179, 0.4);
+      background: var(--bg-card-hover);
+      transform: translateY(-5px);
+    }
+
+    .project-card:hover::before {
+      opacity: 1;
+    }
 
     .project-thumb {
       width: 100%;
@@ -415,13 +520,17 @@
     }
 
     .project-thumb img {
-      width: 100%; height: 100%;
-      object-fit: cover; object-position: top;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
       transition: transform 0.5s ease;
       display: block;
     }
 
-    .project-card:hover .project-thumb img { transform: scale(1.04); }
+    .project-card:hover .project-thumb img {
+      transform: scale(1.04);
+    }
 
     .project-thumb-placeholder {
       width: 100%;
@@ -433,7 +542,7 @@
       font-family: 'Syne', sans-serif;
       font-size: 2.5rem;
       font-weight: 800;
-      color: rgba(41,214,179,0.15);
+      color: rgba(41, 214, 179, 0.15);
       letter-spacing: -1px;
       user-select: none;
     }
@@ -471,20 +580,36 @@
       margin-bottom: 1.25rem;
     }
 
-    .project-tech { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.25rem; }
+    .project-tech {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
 
     .tech-tag {
       font-size: 0.68rem;
       padding: 3px 8px;
       border-radius: 3px;
-      background: rgba(255,255,255,0.05);
+      background: rgba(255, 255, 255, 0.05);
       color: var(--text-muted);
     }
 
-    .project-links { display: flex; gap: 0.75rem; }
+    .project-links {
+      display: flex;
+      gap: 0.75rem;
+    }
 
-    .project-card.placeholder { border-style: dashed; opacity: 0.35; }
-    .project-card.placeholder:hover { transform: none; border-color: var(--border); background: var(--bg-card); }
+    .project-card.placeholder {
+      border-style: dashed;
+      opacity: 0.35;
+    }
+
+    .project-card.placeholder:hover {
+      transform: none;
+      border-color: var(--border);
+      background: var(--bg-card);
+    }
 
     /* =====================
        ABOUT
@@ -496,8 +621,15 @@
       align-items: start;
     }
 
-    .about-text p { font-size: 1rem; color: var(--text-muted); line-height: 1.8; }
-    .about-text p + p { margin-top: 1rem; }
+    .about-text p {
+      font-size: 1rem;
+      color: var(--text-muted);
+      line-height: 1.8;
+    }
+
+    .about-text p+p {
+      margin-top: 1rem;
+    }
 
     .about-stats {
       display: grid;
@@ -513,7 +645,9 @@
       transition: border-color 0.2s;
     }
 
-    .stat-card:hover { border-color: var(--teal); }
+    .stat-card:hover {
+      border-color: var(--teal);
+    }
 
     .stat-num {
       font-family: 'Syne', sans-serif;
@@ -524,7 +658,10 @@
       margin-bottom: 0.25rem;
     }
 
-    .stat-label { font-size: 0.78rem; color: var(--text-muted); }
+    .stat-label {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
 
     /* =====================
        CONTACT
@@ -542,10 +679,12 @@
     .contact-inner::before {
       content: '';
       position: absolute;
-      bottom: -60%; left: 50%;
+      bottom: -60%;
+      left: 50%;
       transform: translateX(-50%);
-      width: 500px; height: 500px;
-      background: radial-gradient(circle, rgba(41,214,179,0.09) 0%, transparent 65%);
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(41, 214, 179, 0.09) 0%, transparent 65%);
       pointer-events: none;
     }
 
@@ -557,7 +696,11 @@
       margin-bottom: 0.75rem;
     }
 
-    .contact-inner > p { color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem; }
+    .contact-inner>p {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
 
     .email-link {
       display: inline-flex;
@@ -570,37 +713,61 @@
       transition: color 0.2s;
     }
 
-    .email-link:hover { color: var(--white); }
+    .email-link:hover {
+      color: var(--white);
+    }
 
     /* =====================
        FOOTER
     ===================== */
-    footer { text-align: center; padding: 1.5rem; border-top: 1px solid var(--border); }
-    .footer-text { color: var(--text-muted); font-size: 0.78rem; }
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .footer-text {
+      color: var(--text-muted);
+      font-size: 0.78rem;
+    }
 
     /* =====================
        SCROLL TO TOP
     ===================== */
     #scroll-to-top {
       position: fixed;
-      bottom: 24px; right: 24px;
+      bottom: 24px;
+      right: 24px;
       background: var(--teal);
       color: #000;
       border: none;
       border-radius: 50%;
-      width: 42px; height: 42px;
+      width: 42px;
+      height: 42px;
       font-size: 16px;
       z-index: 1000;
       display: flex;
       justify-content: center;
       align-items: center;
       transition: opacity 0.3s, transform 0.2s;
-      box-shadow: 0 4px 20px rgba(41,214,179,0.3);
+      box-shadow: 0 4px 20px rgba(41, 214, 179, 0.3);
     }
 
-    #scroll-to-top:hover { background: var(--teal-dark); transform: translateY(-2px); }
-    #scroll-to-top.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
-    #scroll-to-top.show   { opacity: 1; visibility: visible; }
+    #scroll-to-top:hover {
+      background: var(--teal-dark);
+      transform: translateY(-2px);
+    }
+
+    #scroll-to-top.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+
+    #scroll-to-top.show {
+      opacity: 1;
+      visibility: visible;
+    }
 
     /* =====================
        REVEAL ANIMATIONS
@@ -627,9 +794,18 @@
        RESPONSIVE
     ===================== */
     @media (max-width: 768px) {
-      section { padding: 60px 5%; }
-      .about-content { grid-template-columns: 1fr; gap: 2rem; }
-      .project-grid { grid-template-columns: 1fr; }
+      section {
+        padding: 60px 5%;
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .project-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -735,17 +911,14 @@
             Option B — Auto: sign up at https://apiflash.com (free tier), get your access_key,
             replace REPLACE_WITH_KEY below. It'll auto-screenshot your live URL.
           -->
-          <img
-            src="./images/textutils.png"
-            alt="TextUtils screenshot"
-            loading="lazy"
-            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=project-thumb-placeholder>TU</div>'"
-          />
+          <img src="./images/textutils.png" alt="TextUtils screenshot" loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=project-thumb-placeholder>TU</div>'" />
         </div>
         <div class="project-body">
           <p class="project-num">01</p>
           <h4>TextUtils</h4>
-          <p>A text manipulation toolkit with word count, case conversion, and more. My first React project — built while learning the framework.</p>
+          <p>A text manipulation toolkit with word count, case conversion, and more. My first React project — built
+            while learning the framework.</p>
           <div class="project-tech">
             <span class="tech-tag">React</span>
             <span class="tech-tag">JavaScript</span>
@@ -761,22 +934,22 @@
         <div class="project-thumb">
           <img
             src="https://api.apiflash.com/v1/urltoimage?access_key=REPLACE_WITH_KEY&url=https://shorten-url.netlify.app&width=800&height=450"
-            alt="Chat App screenshot"
-            loading="lazy"
-            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=project-thumb-placeholder>CA</div>'"
-          />
+            alt="Chat App screenshot" loading="lazy"
+            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=project-thumb-placeholder>CA</div>'" />
         </div>
         <div class="project-body">
           <p class="project-num">02</p>
           <h4>Chat App</h4>
-          <p>Real-time chat app with WebSocket support. Built on the MongoDB + Next.js stack for fast, seamless communication.</p>
+          <p>Real-time chat app with WebSocket support. Built on the MongoDB + Next.js stack for fast, seamless
+            communication.</p>
           <div class="project-tech">
             <span class="tech-tag">Next.js</span>
             <span class="tech-tag">MongoDB</span>
             <span class="tech-tag">Sockets</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/himanshu-tw/shorten-url" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
+            <a href="https://github.com/himanshu-tw/shorten-url" class="btn btn-primary btn-sm"
+              target="_blank">GitHub</a>
             <a href="https://shorten-url.netlify.app" class="btn btn-ghost btn-sm" target="_blank">Live →</a>
           </div>
         </div>
@@ -787,14 +960,16 @@
         <div class="project-body">
           <p class="project-num">03</p>
           <h4>next-mongo-connect</h4>
-          <p>An npm package for Next.js that connects to MongoDB in a single line. Removes boilerplate from every project.</p>
+          <p>An npm package for Next.js that connects to MongoDB in a single line. Removes boilerplate from every
+            project.</p>
           <div class="project-tech">
             <span class="tech-tag">npm</span>
             <span class="tech-tag">Next.js</span>
             <span class="tech-tag">MongoDB</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/himanshu-tw/next-mongo-connect" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
+            <a href="https://github.com/himanshu-tw/next-mongo-connect" class="btn btn-primary btn-sm"
+              target="_blank">GitHub</a>
           </div>
         </div>
       </div>
@@ -818,8 +993,10 @@
     <h2 class="section-title">About Me</h2>
     <div class="about-content">
       <div class="about-text">
-        <p>I'm from West Bengal, India, currently freelancing as a web developer. Coming from a middle-class background, I've seen what it takes to work for what you want — and that's shaped how I approach everything.</p>
-        <p>I pick up new skills fast, balance learning with studies, and ship things that work. Always building something.</p>
+        <p>I'm from West Bengal, India, currently freelancing as a web developer. Coming from a middle-class background,
+          I've seen what it takes to work for what you want — and that's shaped how I approach everything.</p>
+        <p>I pick up new skills fast, balance learning with studies, and ship things that work. Always building
+          something.</p>
       </div>
       <div class="about-stats">
         <div class="stat-card">
@@ -864,7 +1041,7 @@
     // =====================
     // 2. CUSTOM CURSOR
     // =====================
-    const dot  = document.getElementById('cursor-dot');
+    const dot = document.getElementById('cursor-dot');
     const ring = document.getElementById('cursor-ring');
     let ringX = 0, ringY = 0, mouseX = 0, mouseY = 0;
 
@@ -872,14 +1049,14 @@
       mouseX = e.clientX;
       mouseY = e.clientY;
       dot.style.left = mouseX + 'px';
-      dot.style.top  = mouseY + 'px';
+      dot.style.top = mouseY + 'px';
     });
 
     (function animateRing() {
       ringX += (mouseX - ringX) * 0.12;
       ringY += (mouseY - ringY) * 0.12;
       ring.style.left = ringX + 'px';
-      ring.style.top  = ringY + 'px';
+      ring.style.top = ringY + 'px';
       requestAnimationFrame(animateRing);
     })();
 
@@ -894,7 +1071,7 @@
     // =====================
     // 6. HAMBURGER
     // =====================
-    const hamburger  = document.getElementById('hamburger');
+    const hamburger = document.getElementById('hamburger');
     const mobileMenu = document.getElementById('mobile-menu');
 
     hamburger.addEventListener('click', () => {
@@ -981,8 +1158,8 @@
       document.querySelectorAll('[data-reveal]').forEach(el => {
         el.classList.add('reveal-hidden');
         el.style.transitionDelay = (el.dataset.revealDelay || 0) + 'ms';
-        if      (el.dataset.reveal === 'left')    el.style.transform = 'translateX(-32px)';
-        else if (el.dataset.reveal === 'up')      el.style.transform = 'translateY(40px)';
+        if (el.dataset.reveal === 'left') el.style.transform = 'translateX(-32px)';
+        else if (el.dataset.reveal === 'up') el.style.transform = 'translateY(40px)';
         else if (el.dataset.reveal === 'up-clip') {
           el.style.clipPath = 'inset(0 0 100% 0)';
           el.style.transform = 'translateY(16px)';
@@ -1019,4 +1196,5 @@
   </script>
 
 </body>
+
 </html>
