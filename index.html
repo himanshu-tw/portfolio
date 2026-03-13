@@ -16,13 +16,11 @@
   <meta property="og:type" content="website">
   <meta property="og:title" content="Himanshu Tiwari | Web Developer">
   <meta property="og:description" content="Freelance web developer from India. React, Next.js, Node, MongoDB.">
-  <meta property="og:image" content="https://og-image-url.vercel.app/Himanshu%20Tiwari.png">
   <meta property="og:url" content="https://himanshu-tw.github.io">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Himanshu Tiwari | Web Developer">
   <meta name="twitter:description" content="Freelance web developer from India. React, Next.js, Node, MongoDB.">
-  <meta name="twitter:image" content="https://og-image-url.vercel.app/Himanshu%20Tiwari.png">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
@@ -42,11 +40,7 @@
 
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-    html {
-      scroll-behavior: smooth;
-      width: 100%;
-      overflow-x: hidden;
-    }
+    html { scroll-behavior: smooth; width: 100%; overflow-x: hidden; }
 
     body {
       font-family: 'DM Sans', sans-serif;
@@ -161,6 +155,15 @@
     .btn-ghost:hover { border-color: var(--teal); color: var(--teal); }
     .btn-sm { padding: 8px 16px; font-size: 0.78rem; border-radius: 5px; }
 
+    /* highlight CTA */
+    .btn-hire {
+      background: transparent;
+      color: var(--teal);
+      border: 1.5px solid var(--teal);
+      font-weight: 600;
+    }
+    .btn-hire:hover { background: var(--teal); color: #000; transform: translateY(-1px); }
+
     .scroll-hint {
       position: absolute; bottom: 2rem; left: 50%; transform: translateX(-50%);
       display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
@@ -252,11 +255,21 @@
       color: rgba(41, 214, 179, 0.15); letter-spacing: -1px; user-select: none;
     }
 
-    .project-card.placeholder .project-thumb-placeholder { margin-top: 0; }
-
     .project-body { padding: 1.5rem; display: flex; flex-direction: column; flex-grow: 1; }
 
     .project-num { font-family: 'Syne', sans-serif; font-size: 0.65rem; color: var(--teal); letter-spacing: 2px; margin-bottom: 0.6rem; font-weight: 600; }
+
+    /* Badge for freelance demos */
+    .project-badge {
+      display: inline-block;
+      font-size: 0.6rem; font-weight: 600; letter-spacing: 1.5px;
+      text-transform: uppercase;
+      padding: 2px 8px; border-radius: 3px;
+      background: rgba(41, 214, 179, 0.12);
+      border: 1px solid rgba(41, 214, 179, 0.3);
+      color: var(--teal);
+      margin-bottom: 0.6rem;
+    }
 
     .project-card h4 { font-family: 'Syne', sans-serif; font-size: 1.1rem; font-weight: 700; color: var(--white); margin-bottom: 0.6rem; letter-spacing: -0.3px; }
 
@@ -267,9 +280,6 @@
     .tech-tag { font-size: 0.68rem; padding: 3px 8px; border-radius: 3px; background: rgba(255, 255, 255, 0.05); color: var(--text-muted); }
 
     .project-links { display: flex; gap: 0.75rem; }
-
-    .project-card.placeholder { border-style: dashed; opacity: 0.35; }
-    .project-card.placeholder:hover { transform: none; border-color: var(--border); background: var(--bg-card); }
 
     /* ABOUT */
     .about-content { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
@@ -293,7 +303,18 @@
     }
 
     .contact-inner h3 { font-family: 'Syne', sans-serif; font-size: 1.5rem; font-weight: 700; color: var(--white); margin-bottom: 0.75rem; }
-    .contact-inner > p { color: var(--text-muted); margin-bottom: 2rem; font-size: 0.95rem; }
+    .contact-inner > p { color: var(--text-muted); margin-bottom: 0.5rem; font-size: 0.95rem; }
+    .contact-offer {
+      display: inline-block;
+      font-family: 'Syne', sans-serif;
+      font-size: 1.05rem; font-weight: 700;
+      color: var(--teal);
+      background: rgba(41,214,179,0.07);
+      border: 1px solid rgba(41,214,179,0.2);
+      border-radius: 8px;
+      padding: 10px 24px;
+      margin-bottom: 1.75rem;
+    }
 
     .email-link { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--teal); text-decoration: none; font-size: 1rem; font-weight: 500; transition: color 0.2s; }
     .email-link:hover { color: var(--white); }
@@ -327,7 +348,6 @@
       transition: opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1), transform 0.7s cubic-bezier(0.22, 1, 0.36, 1), clip-path 0.7s cubic-bezier(0.22, 1, 0.36, 1), border-color 0.25s, background 0.25s;
     }
 
-    /* RESPONSIVE */
     @media (max-width: 768px) {
       section { padding: 60px 5%; }
       .about-content { grid-template-columns: 1fr; gap: 2rem; }
@@ -365,12 +385,11 @@
     <p class="hero-eyebrow">Web Developer · Freelancer</p>
     <h1 class="name">Himanshu<br><span>Tiwari</span></h1>
     <p class="about-me-header">
-      I build fast, clean web applications — from full-stack apps to npm packages.
-      Currently freelancing and learning in public.
+      I build websites and web apps for local businesses and indie products — fast, clean, and ready to launch. React, Next.js, Node.js, and AI tools.
     </p>
     <div class="buttons">
-      <a href="https://www.github.com/himanshu-tw" class="btn btn-primary" target="_blank">GitHub →</a>
-      <a data-scroll-to="contact" href="#" class="btn btn-ghost">Get in touch</a>
+      <a data-scroll-to="contact" href="#" class="btn btn-hire">Hire Me — ₹5,000 onwards →</a>
+      <a href="https://www.github.com/himanshu-tw" class="btn btn-ghost" target="_blank">GitHub</a>
     </div>
     <div class="scroll-hint">Scroll</div>
   </header>
@@ -391,8 +410,6 @@
           <span class="skill-tag">Node.js</span>
           <span class="skill-tag">Python</span>
           <span class="skill-tag">PHP</span>
-          <span class="skill-tag">Dart</span>
-          <span class="skill-tag">Ruby</span>
           <span class="skill-tag">MongoDB</span>
           <span class="skill-tag">Firebase</span>
           <span class="skill-tag">PostgreSQL</span>
@@ -404,17 +421,17 @@
           <span class="skill-tag">Git</span>
           <span class="skill-tag">GitHub</span>
           <span class="skill-tag">Clerk</span>
-          <span class="skill-tag">XAMPP</span>
-          <span class="skill-tag">Communication</span>
-          <span class="skill-tag">Time Management</span>
+          <span class="skill-tag">OpenCV</span>
+          <span class="skill-tag">MediaPipe</span>
         </div>
       </div>
       <div class="skill-card">
-        <h3>No-Code</h3>
+        <h3>No-Code & AI</h3>
         <div class="skill-tags">
           <span class="skill-tag">Framer</span>
           <span class="skill-tag">Zapier</span>
           <span class="skill-tag">Make.com</span>
+          <span class="skill-tag">AI Integration</span>
         </div>
       </div>
     </div>
@@ -427,85 +444,61 @@
     <h2 class="section-title">Projects</h2>
     <div class="project-grid">
 
-      <!-- 01 TextUtils -->
+      <!-- 01 Spice Route -->
       <div class="project-card">
         <div class="project-thumb">
-          <img src="./images/portfolio-textutils.png" alt="TextUtils screenshot" loading="lazy"
-            onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div class=project-thumb-placeholder>TU</div>')" />
+          <img src="./images/spice-route-preview.png" alt="Spice Route restaurant website" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+          <div class="project-thumb-placeholder" style="display:none">SR</div>
         </div>
         <div class="project-body">
+          <span class="project-badge">Freelance Demo</span>
           <p class="project-num">01</p>
-          <h4>TextUtils</h4>
-          <p>A text manipulation toolkit with word count, case conversion, and more. My first React project — built while learning the framework.</p>
+          <h4>Spice Route</h4>
+          <p>Dark-themed restaurant website with menu, ambiance gallery, and reservation section. Built as a demo to pitch local F&B businesses.</p>
           <div class="project-tech">
-            <span class="tech-tag">React</span>
+            <span class="tech-tag">HTML/CSS</span>
             <span class="tech-tag">JavaScript</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/himanshu-tw/textutils" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
-            <a href="https://mytextutils1.netlify.app" class="btn btn-ghost btn-sm" target="_blank">Live →</a>
+            <a href="./spice-route/index.html" class="btn btn-primary btn-sm" target="_blank">Live Demo →</a>
           </div>
         </div>
       </div>
 
-      <!-- 02 Chat App -->
+      <!-- 02 RASA -->
       <div class="project-card">
         <div class="project-thumb">
-          <img
-            src="https://api.microlink.io/?url=https%3A%2F%2Fgithub.com%2Fhimanshu-tw%2Fchat-app&screenshot=true&meta=false&embed=screenshot.url"
-            alt="Chat App screenshot" loading="lazy"
-            onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div class=project-thumb-placeholder>CA</div>')" />
+          <img src="./images/rasa-preview.png" alt="RASA fashion shop website" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+          <div class="project-thumb-placeholder" style="display:none">RASA</div>
         </div>
         <div class="project-body">
+          <span class="project-badge">Freelance Demo</span>
           <p class="project-num">02</p>
-          <h4>Chat App</h4>
-          <p>Real-time chat app with WebSocket support. Built on the MERN stack with Socket.io for fast, seamless communication.</p>
+          <h4>RASA</h4>
+          <p>Minimal fashion boutique website with lookbook layout, product showcase, and contact CTA. Demo piece for local clothing stores.</p>
           <div class="project-tech">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">MongoDB</span>
-            <span class="tech-tag">Socket.io</span>
+            <span class="tech-tag">HTML/CSS</span>
+            <span class="tech-tag">JavaScript</span>
           </div>
           <div class="project-links">
-            <a href="https://github.com/himanshu-tw/chat-app" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
+            <a href="./rasa/index.html" class="btn btn-primary btn-sm" target="_blank">Live Demo →</a>
           </div>
         </div>
       </div>
 
-      <!-- 03 next-mongo-connect -->
-      <div class="project-card">
-        <div class="project-thumb">
-          <img
-            src="./images/portfolio-next-mongo-connect.png"
-            alt="next-mongo-connect landing page" loading="lazy"
-            onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div class=project-thumb-placeholder>NMC</div>')" />
-        </div>
-        <div class="project-body">
-          <p class="project-num">03</p>
-          <h4>next-mongo-connect</h4>
-          <p>An npm package for Next.js that connects to MongoDB in a single line. Removes boilerplate from every project.</p>
-          <div class="project-tech">
-            <span class="tech-tag">npm</span>
-            <span class="tech-tag">Next.js</span>
-            <span class="tech-tag">MongoDB</span>
-          </div>
-          <div class="project-links">
-            <a href="https://github.com/himanshu-tw/next-mongo-connect" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
-            <a href="https://himanshu-tw.github.io/next-mongo-connect-landing-page" class="btn btn-ghost btn-sm" target="_blank">Live →</a>
-          </div>
-        </div>
-      </div>
-
-      <!-- 04 exercise-form-checker -->
+      <!-- 03 exercise-form-checker -->
       <div class="project-card">
         <div class="project-thumb">
           <img
             src="./images/exercise-form-checker-landing-page.png"
             alt="exercise-form-checker landing page" loading="lazy"
-            onerror="this.style.display='none'; this.insertAdjacentHTML('afterend', '<div class=project-thumb-placeholder>EFC</div>')" />
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+          <div class="project-thumb-placeholder" style="display:none">EFC</div>
         </div>
         <div class="project-body">
-          <p class="project-num">04</p>
+          <p class="project-num">03</p>
           <h4>exercise-form-checker</h4>
           <p>Real-time exercise form checker using webcam. Counts reps and gives instant visual feedback — powered by MediaPipe Pose Landmarker.</p>
           <div class="project-tech">
@@ -520,6 +513,56 @@
         </div>
       </div>
 
+      <!-- 04 next-mongo-connect -->
+      <div class="project-card">
+        <div class="project-thumb">
+          <img
+            src="./images/portfolio-next-mongo-connect.png"
+            alt="next-mongo-connect landing page" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+          <div class="project-thumb-placeholder" style="display:none">NMC</div>
+        </div>
+        <div class="project-body">
+          <p class="project-num">04</p>
+          <h4>next-mongo-connect</h4>
+          <p>An npm package for Next.js that connects to MongoDB in a single line. Removes boilerplate from every project.</p>
+          <div class="project-tech">
+            <span class="tech-tag">npm</span>
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">MongoDB</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/himanshu-tw/next-mongo-connect" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
+            <a href="https://himanshu-tw.github.io/next-mongo-connect-landing-page" class="btn btn-ghost btn-sm" target="_blank">Live →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- 05 Chat App -->
+      <div class="project-card">
+        <div class="project-thumb">
+          <img
+            src="https://api.microlink.io/?url=https%3A%2F%2Fgithub.com%2Fhimanshu-tw%2Fchat-app&screenshot=true&meta=false&embed=screenshot.url"
+            alt="Chat App screenshot" loading="lazy"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'" />
+          <div class="project-thumb-placeholder" style="display:none">CA</div>
+        </div>
+        <div class="project-body">
+          <p class="project-num">05</p>
+          <h4>Chat App</h4>
+          <p>Real-time chat app with WebSocket support. Built on the MERN stack with Socket.io for fast, seamless communication.</p>
+          <div class="project-tech">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Socket.io</span>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/himanshu-tw/chat-app" class="btn btn-primary btn-sm" target="_blank">GitHub</a>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -530,14 +573,14 @@
     <h2 class="section-title">About Me</h2>
     <div class="about-content">
       <div class="about-text">
-        <p>I'm from West Bengal, India, currently freelancing as a web developer. Coming from a middle-class background, I've seen what it takes to work for what you want — and that's shaped how I approach everything.</p>
-        <p>I pick up new skills fast, balance learning with studies, and ship things that work. Always building something.</p>
+        <p>I'm a freelance web developer from West Bengal, India. I build websites and tools for local businesses and ship my own indie products on the side.</p>
+        <p>I work fast, communicate clearly, and I use AI tools to deliver more in less time. If you need a website — I can have something live within a week.</p>
       </div>
       <div class="about-stats">
-        <div class="stat-card"><div class="stat-num">4+</div><div class="stat-label">Projects shipped</div></div>
+        <div class="stat-card"><div class="stat-num">5+</div><div class="stat-label">Projects shipped</div></div>
         <div class="stat-card"><div class="stat-num">1</div><div class="stat-label">npm package</div></div>
-        <div class="stat-card"><div class="stat-num">10+</div><div class="stat-label">Technologies</div></div>
-        <div class="stat-card"><div class="stat-num">∞</div><div class="stat-label">Still learning</div></div>
+        <div class="stat-card"><div class="stat-num">7 days</div><div class="stat-label">Avg delivery time</div></div>
+        <div class="stat-card"><div class="stat-num">₹5K</div><div class="stat-label">Starting price</div></div>
       </div>
     </div>
   </section>
@@ -548,8 +591,10 @@
     <p class="section-label">Let's talk</p>
     <h2 class="section-title">Contact</h2>
     <div class="contact-inner">
-      <h3>Open to freelance work</h3>
-      <p>Have a project in mind? Drop me a mail.</p>
+      <h3>Need a website for your business?</h3>
+      <p>Fast delivery. Clean design. No fluff.</p>
+      <div class="contact-offer">Website in 7 days · Starting ₹5,000</div>
+      <br>
       <a href="mailto:dev.himanshutiwari@gmail.com" class="email-link">✉ dev.himanshutiwari@gmail.com</a>
     </div>
   </section>
